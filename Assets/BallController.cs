@@ -32,7 +32,9 @@ public class BallController : MonoBehaviour
         {
             inputVector += Vector2.left;
         }
-
+        Vector3 inputXZPlane = new Vector3(inputVector.x, 0, inputVector.y);
+        sphereRigidbody.AddForce(inputXZPlane);
         Debug.Log("Resultant Vector: " + inputVector);
+        Debug.Log("Resultant 3D Vector: " + inputXZPlane);
     }
 }
